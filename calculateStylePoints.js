@@ -1,6 +1,6 @@
 'use strict';
 const calculateStylePoints = styleNotes => {
-  if (Object.prototype.toString.call(styleNotes) !== '[object Array]')
+  if (!Array.isArray(styleNotes))
     throw TypeError('Style notes must be an array.');
   if (styleNotes.length !== 5)
     throw Error(`There must be 5 notes, not ${styleNotes.length}!!!`);
